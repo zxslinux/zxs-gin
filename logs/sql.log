@@ -1,0 +1,363 @@
+
+2022/05/20 17:32:26 /Users/zxs/workspace/golang/pkg/mod/gorm.io/driver/mysql@v1.3.3/migrator.go:228
+[10.058ms] [rows:-] SELECT DATABASE()
+
+2022/05/20 17:32:26 /Users/zxs/workspace/golang/pkg/mod/gorm.io/driver/mysql@v1.3.3/migrator.go:231
+[46.024ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'elastichd%' ORDER BY SCHEMA_NAME='elastichd' DESC limit 1
+
+2022/05/20 17:32:26 /Users/zxs/workspace/project/zxs-gin/bootstrap/db.go:108
+[26.086ms] [rows:-] SELECT count(*) FROM information_schema.tables WHERE table_schema = 'elastichd' AND table_name = 'envs' AND table_type = 'BASE TABLE'
+
+2022/05/20 17:32:26 /Users/zxs/workspace/project/zxs-gin/bootstrap/db.go:108 SLOW SQL >= 200ms
+[402.682ms] [rows:0] CREATE TABLE `envs` (`id` bigint unsigned AUTO_INCREMENT,`name` varchar(191) NOT NULL COMMENT '环境英文名称',`display_name` varchar(191) NOT NULL COMMENT '环境中文名称',`created_at` datetime NULL,`updated_at` datetime NULL,`deleted_at` datetime NULL,PRIMARY KEY (`id`),INDEX idx_envs_display_name (`display_name`),INDEX idx_envs_deleted_at (`deleted_at`))
+
+2022/05/20 17:42:57 /Users/zxs/workspace/golang/pkg/mod/gorm.io/driver/mysql@v1.3.3/migrator.go:228
+[2.483ms] [rows:-] SELECT DATABASE()
+
+2022/05/20 17:42:57 /Users/zxs/workspace/golang/pkg/mod/gorm.io/driver/mysql@v1.3.3/migrator.go:231
+[8.322ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'elastichd%' ORDER BY SCHEMA_NAME='elastichd' DESC limit 1
+
+2022/05/20 17:42:57 /Users/zxs/workspace/project/zxs-gin/bootstrap/db.go:108
+[5.688ms] [rows:-] SELECT count(*) FROM information_schema.tables WHERE table_schema = 'elastichd' AND table_name = 'envs' AND table_type = 'BASE TABLE'
+
+2022/05/20 17:42:57 /Users/zxs/workspace/golang/pkg/mod/gorm.io/driver/mysql@v1.3.3/migrator.go:228
+[4.036ms] [rows:-] SELECT DATABASE()
+
+2022/05/20 17:42:57 /Users/zxs/workspace/golang/pkg/mod/gorm.io/driver/mysql@v1.3.3/migrator.go:231
+[7.879ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'elastichd%' ORDER BY SCHEMA_NAME='elastichd' DESC limit 1
+
+2022/05/20 17:42:57 /Users/zxs/workspace/golang/pkg/mod/gorm.io/driver/mysql@v1.3.3/migrator.go:148
+[9.171ms] [rows:-] SELECT * FROM `envs` LIMIT 1
+
+2022/05/20 17:42:57 /Users/zxs/workspace/golang/pkg/mod/gorm.io/driver/mysql@v1.3.3/migrator.go:166
+[15.716ms] [rows:-] SELECT column_name, column_default, is_nullable = 'YES', data_type, character_maximum_length, column_type, column_key, extra, column_comment, numeric_precision, numeric_scale FROM information_schema.columns WHERE table_schema = 'elastichd' AND table_name = 'envs' ORDER BY ORDINAL_POSITION
+
+2022/05/20 17:42:57 /Users/zxs/workspace/golang/pkg/mod/gorm.io/driver/mysql@v1.3.3/migrator.go:228
+[3.804ms] [rows:-] SELECT DATABASE()
+
+2022/05/20 17:42:57 /Users/zxs/workspace/golang/pkg/mod/gorm.io/driver/mysql@v1.3.3/migrator.go:231
+[6.199ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'elastichd%' ORDER BY SCHEMA_NAME='elastichd' DESC limit 1
+
+2022/05/20 17:42:57 /Users/zxs/workspace/project/zxs-gin/bootstrap/db.go:108
+[5.463ms] [rows:-] SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'elastichd' AND table_name = 'envs' AND index_name = 'idx_envs_display_name'
+
+2022/05/20 17:42:57 /Users/zxs/workspace/golang/pkg/mod/gorm.io/driver/mysql@v1.3.3/migrator.go:228
+[10.249ms] [rows:-] SELECT DATABASE()
+
+2022/05/20 17:42:57 /Users/zxs/workspace/golang/pkg/mod/gorm.io/driver/mysql@v1.3.3/migrator.go:231
+[11.421ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'elastichd%' ORDER BY SCHEMA_NAME='elastichd' DESC limit 1
+
+2022/05/20 17:42:57 /Users/zxs/workspace/project/zxs-gin/bootstrap/db.go:108
+[6.768ms] [rows:-] SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'elastichd' AND table_name = 'envs' AND index_name = 'idx_envs_deleted_at'
+
+2022/05/20 17:47:53 /Users/zxs/workspace/golang/pkg/mod/gorm.io/driver/mysql@v1.3.3/migrator.go:228
+[2.918ms] [rows:-] SELECT DATABASE()
+
+2022/05/20 17:47:53 /Users/zxs/workspace/golang/pkg/mod/gorm.io/driver/mysql@v1.3.3/migrator.go:231
+[9.511ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'elastichd%' ORDER BY SCHEMA_NAME='elastichd' DESC limit 1
+
+2022/05/20 17:47:53 /Users/zxs/workspace/project/zxs-gin/bootstrap/db.go:108
+[6.150ms] [rows:-] SELECT count(*) FROM information_schema.tables WHERE table_schema = 'elastichd' AND table_name = 'envs' AND table_type = 'BASE TABLE'
+
+2022/05/20 17:47:53 /Users/zxs/workspace/golang/pkg/mod/gorm.io/driver/mysql@v1.3.3/migrator.go:228
+[2.890ms] [rows:-] SELECT DATABASE()
+
+2022/05/20 17:47:53 /Users/zxs/workspace/golang/pkg/mod/gorm.io/driver/mysql@v1.3.3/migrator.go:231
+[7.629ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'elastichd%' ORDER BY SCHEMA_NAME='elastichd' DESC limit 1
+
+2022/05/20 17:47:53 /Users/zxs/workspace/golang/pkg/mod/gorm.io/driver/mysql@v1.3.3/migrator.go:148
+[7.208ms] [rows:-] SELECT * FROM `envs` LIMIT 1
+
+2022/05/20 17:47:53 /Users/zxs/workspace/golang/pkg/mod/gorm.io/driver/mysql@v1.3.3/migrator.go:166
+[12.890ms] [rows:-] SELECT column_name, column_default, is_nullable = 'YES', data_type, character_maximum_length, column_type, column_key, extra, column_comment, numeric_precision, numeric_scale FROM information_schema.columns WHERE table_schema = 'elastichd' AND table_name = 'envs' ORDER BY ORDINAL_POSITION
+
+2022/05/20 17:47:53 /Users/zxs/workspace/golang/pkg/mod/gorm.io/driver/mysql@v1.3.3/migrator.go:228
+[4.668ms] [rows:-] SELECT DATABASE()
+
+2022/05/20 17:47:53 /Users/zxs/workspace/golang/pkg/mod/gorm.io/driver/mysql@v1.3.3/migrator.go:231
+[7.040ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'elastichd%' ORDER BY SCHEMA_NAME='elastichd' DESC limit 1
+
+2022/05/20 17:47:53 /Users/zxs/workspace/project/zxs-gin/bootstrap/db.go:108
+[6.068ms] [rows:-] SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'elastichd' AND table_name = 'envs' AND index_name = 'idx_envs_display_name'
+
+2022/05/20 17:47:53 /Users/zxs/workspace/golang/pkg/mod/gorm.io/driver/mysql@v1.3.3/migrator.go:228
+[3.382ms] [rows:-] SELECT DATABASE()
+
+2022/05/20 17:47:53 /Users/zxs/workspace/golang/pkg/mod/gorm.io/driver/mysql@v1.3.3/migrator.go:231
+[7.707ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'elastichd%' ORDER BY SCHEMA_NAME='elastichd' DESC limit 1
+
+2022/05/20 17:47:53 /Users/zxs/workspace/project/zxs-gin/bootstrap/db.go:108
+[6.897ms] [rows:-] SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'elastichd' AND table_name = 'envs' AND index_name = 'idx_envs_deleted_at'
+
+2022/05/20 17:51:53 /Users/zxs/workspace/golang/pkg/mod/gorm.io/driver/mysql@v1.3.3/migrator.go:228
+[2.483ms] [rows:-] SELECT DATABASE()
+
+2022/05/20 17:51:53 /Users/zxs/workspace/golang/pkg/mod/gorm.io/driver/mysql@v1.3.3/migrator.go:231
+[7.195ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'elastichd%' ORDER BY SCHEMA_NAME='elastichd' DESC limit 1
+
+2022/05/20 17:51:53 /Users/zxs/workspace/project/zxs-gin/bootstrap/db.go:108
+[5.411ms] [rows:-] SELECT count(*) FROM information_schema.tables WHERE table_schema = 'elastichd' AND table_name = 'envs' AND table_type = 'BASE TABLE'
+
+2022/05/20 17:51:53 /Users/zxs/workspace/golang/pkg/mod/gorm.io/driver/mysql@v1.3.3/migrator.go:228
+[3.624ms] [rows:-] SELECT DATABASE()
+
+2022/05/20 17:51:53 /Users/zxs/workspace/golang/pkg/mod/gorm.io/driver/mysql@v1.3.3/migrator.go:231
+[12.116ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'elastichd%' ORDER BY SCHEMA_NAME='elastichd' DESC limit 1
+
+2022/05/20 17:51:53 /Users/zxs/workspace/golang/pkg/mod/gorm.io/driver/mysql@v1.3.3/migrator.go:148
+[12.882ms] [rows:-] SELECT * FROM `envs` LIMIT 1
+
+2022/05/20 17:51:53 /Users/zxs/workspace/golang/pkg/mod/gorm.io/driver/mysql@v1.3.3/migrator.go:166
+[15.952ms] [rows:-] SELECT column_name, column_default, is_nullable = 'YES', data_type, character_maximum_length, column_type, column_key, extra, column_comment, numeric_precision, numeric_scale FROM information_schema.columns WHERE table_schema = 'elastichd' AND table_name = 'envs' ORDER BY ORDINAL_POSITION
+
+2022/05/20 17:51:53 /Users/zxs/workspace/golang/pkg/mod/gorm.io/driver/mysql@v1.3.3/migrator.go:228
+[3.185ms] [rows:-] SELECT DATABASE()
+
+2022/05/20 17:51:53 /Users/zxs/workspace/golang/pkg/mod/gorm.io/driver/mysql@v1.3.3/migrator.go:231
+[7.512ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'elastichd%' ORDER BY SCHEMA_NAME='elastichd' DESC limit 1
+
+2022/05/20 17:51:53 /Users/zxs/workspace/project/zxs-gin/bootstrap/db.go:108
+[11.936ms] [rows:-] SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'elastichd' AND table_name = 'envs' AND index_name = 'idx_envs_display_name'
+
+2022/05/20 17:51:53 /Users/zxs/workspace/golang/pkg/mod/gorm.io/driver/mysql@v1.3.3/migrator.go:228
+[3.089ms] [rows:-] SELECT DATABASE()
+
+2022/05/20 17:51:53 /Users/zxs/workspace/golang/pkg/mod/gorm.io/driver/mysql@v1.3.3/migrator.go:231
+[6.324ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'elastichd%' ORDER BY SCHEMA_NAME='elastichd' DESC limit 1
+
+2022/05/20 17:51:53 /Users/zxs/workspace/project/zxs-gin/bootstrap/db.go:108
+[5.931ms] [rows:-] SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'elastichd' AND table_name = 'envs' AND index_name = 'idx_envs_deleted_at'
+
+2022/05/20 17:52:58 /Users/zxs/workspace/golang/pkg/mod/gorm.io/driver/mysql@v1.3.3/migrator.go:228
+[2.540ms] [rows:-] SELECT DATABASE()
+
+2022/05/20 17:52:58 /Users/zxs/workspace/golang/pkg/mod/gorm.io/driver/mysql@v1.3.3/migrator.go:231
+[9.555ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'elastichd%' ORDER BY SCHEMA_NAME='elastichd' DESC limit 1
+
+2022/05/20 17:52:58 /Users/zxs/workspace/project/zxs-gin/bootstrap/db.go:108
+[6.178ms] [rows:-] SELECT count(*) FROM information_schema.tables WHERE table_schema = 'elastichd' AND table_name = 'envs' AND table_type = 'BASE TABLE'
+
+2022/05/20 17:52:58 /Users/zxs/workspace/golang/pkg/mod/gorm.io/driver/mysql@v1.3.3/migrator.go:228
+[3.711ms] [rows:-] SELECT DATABASE()
+
+2022/05/20 17:52:58 /Users/zxs/workspace/golang/pkg/mod/gorm.io/driver/mysql@v1.3.3/migrator.go:231
+[6.282ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'elastichd%' ORDER BY SCHEMA_NAME='elastichd' DESC limit 1
+
+2022/05/20 17:52:58 /Users/zxs/workspace/golang/pkg/mod/gorm.io/driver/mysql@v1.3.3/migrator.go:148
+[5.605ms] [rows:-] SELECT * FROM `envs` LIMIT 1
+
+2022/05/20 17:52:58 /Users/zxs/workspace/golang/pkg/mod/gorm.io/driver/mysql@v1.3.3/migrator.go:166
+[12.513ms] [rows:-] SELECT column_name, column_default, is_nullable = 'YES', data_type, character_maximum_length, column_type, column_key, extra, column_comment, numeric_precision, numeric_scale FROM information_schema.columns WHERE table_schema = 'elastichd' AND table_name = 'envs' ORDER BY ORDINAL_POSITION
+
+2022/05/20 17:52:58 /Users/zxs/workspace/golang/pkg/mod/gorm.io/driver/mysql@v1.3.3/migrator.go:228
+[3.085ms] [rows:-] SELECT DATABASE()
+
+2022/05/20 17:52:58 /Users/zxs/workspace/golang/pkg/mod/gorm.io/driver/mysql@v1.3.3/migrator.go:231
+[6.225ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'elastichd%' ORDER BY SCHEMA_NAME='elastichd' DESC limit 1
+
+2022/05/20 17:52:58 /Users/zxs/workspace/project/zxs-gin/bootstrap/db.go:108
+[6.318ms] [rows:-] SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'elastichd' AND table_name = 'envs' AND index_name = 'idx_envs_display_name'
+
+2022/05/20 17:52:58 /Users/zxs/workspace/golang/pkg/mod/gorm.io/driver/mysql@v1.3.3/migrator.go:228
+[3.537ms] [rows:-] SELECT DATABASE()
+
+2022/05/20 17:52:58 /Users/zxs/workspace/golang/pkg/mod/gorm.io/driver/mysql@v1.3.3/migrator.go:231
+[6.863ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'elastichd%' ORDER BY SCHEMA_NAME='elastichd' DESC limit 1
+
+2022/05/20 17:52:58 /Users/zxs/workspace/project/zxs-gin/bootstrap/db.go:108
+[5.635ms] [rows:-] SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'elastichd' AND table_name = 'envs' AND index_name = 'idx_envs_deleted_at'
+
+2022/05/20 17:53:19 /Users/zxs/workspace/golang/pkg/mod/gorm.io/driver/mysql@v1.3.3/migrator.go:228
+[2.946ms] [rows:-] SELECT DATABASE()
+
+2022/05/20 17:53:19 /Users/zxs/workspace/golang/pkg/mod/gorm.io/driver/mysql@v1.3.3/migrator.go:231
+[7.618ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'elastichd%' ORDER BY SCHEMA_NAME='elastichd' DESC limit 1
+
+2022/05/20 17:53:19 /Users/zxs/workspace/project/zxs-gin/bootstrap/db.go:108
+[5.881ms] [rows:-] SELECT count(*) FROM information_schema.tables WHERE table_schema = 'elastichd' AND table_name = 'envs' AND table_type = 'BASE TABLE'
+
+2022/05/20 17:53:19 /Users/zxs/workspace/golang/pkg/mod/gorm.io/driver/mysql@v1.3.3/migrator.go:228
+[3.975ms] [rows:-] SELECT DATABASE()
+
+2022/05/20 17:53:19 /Users/zxs/workspace/golang/pkg/mod/gorm.io/driver/mysql@v1.3.3/migrator.go:231
+[6.475ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'elastichd%' ORDER BY SCHEMA_NAME='elastichd' DESC limit 1
+
+2022/05/20 17:53:19 /Users/zxs/workspace/golang/pkg/mod/gorm.io/driver/mysql@v1.3.3/migrator.go:148
+[12.815ms] [rows:-] SELECT * FROM `envs` LIMIT 1
+
+2022/05/20 17:53:19 /Users/zxs/workspace/golang/pkg/mod/gorm.io/driver/mysql@v1.3.3/migrator.go:166
+[12.641ms] [rows:-] SELECT column_name, column_default, is_nullable = 'YES', data_type, character_maximum_length, column_type, column_key, extra, column_comment, numeric_precision, numeric_scale FROM information_schema.columns WHERE table_schema = 'elastichd' AND table_name = 'envs' ORDER BY ORDINAL_POSITION
+
+2022/05/20 17:53:19 /Users/zxs/workspace/golang/pkg/mod/gorm.io/driver/mysql@v1.3.3/migrator.go:228
+[3.094ms] [rows:-] SELECT DATABASE()
+
+2022/05/20 17:53:19 /Users/zxs/workspace/golang/pkg/mod/gorm.io/driver/mysql@v1.3.3/migrator.go:231
+[7.243ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'elastichd%' ORDER BY SCHEMA_NAME='elastichd' DESC limit 1
+
+2022/05/20 17:53:19 /Users/zxs/workspace/project/zxs-gin/bootstrap/db.go:108
+[6.528ms] [rows:-] SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'elastichd' AND table_name = 'envs' AND index_name = 'idx_envs_deleted_at'
+
+2022/05/20 17:53:19 /Users/zxs/workspace/golang/pkg/mod/gorm.io/driver/mysql@v1.3.3/migrator.go:228
+[3.540ms] [rows:-] SELECT DATABASE()
+
+2022/05/20 17:53:19 /Users/zxs/workspace/golang/pkg/mod/gorm.io/driver/mysql@v1.3.3/migrator.go:231
+[7.596ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'elastichd%' ORDER BY SCHEMA_NAME='elastichd' DESC limit 1
+
+2022/05/20 17:53:19 /Users/zxs/workspace/project/zxs-gin/bootstrap/db.go:108
+[5.729ms] [rows:-] SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'elastichd' AND table_name = 'envs' AND index_name = 'idx_envs_display_name'
+
+2022/05/20 17:55:06 /Users/zxs/workspace/golang/pkg/mod/gorm.io/driver/mysql@v1.3.3/migrator.go:228
+[2.495ms] [rows:-] SELECT DATABASE()
+
+2022/05/20 17:55:06 /Users/zxs/workspace/golang/pkg/mod/gorm.io/driver/mysql@v1.3.3/migrator.go:231
+[10.452ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'elastichd%' ORDER BY SCHEMA_NAME='elastichd' DESC limit 1
+
+2022/05/20 17:55:06 /Users/zxs/workspace/project/zxs-gin/bootstrap/db.go:108
+[8.859ms] [rows:-] SELECT count(*) FROM information_schema.tables WHERE table_schema = 'elastichd' AND table_name = 'envs' AND table_type = 'BASE TABLE'
+
+2022/05/20 17:55:06 /Users/zxs/workspace/golang/pkg/mod/gorm.io/driver/mysql@v1.3.3/migrator.go:228
+[3.642ms] [rows:-] SELECT DATABASE()
+
+2022/05/20 17:55:06 /Users/zxs/workspace/golang/pkg/mod/gorm.io/driver/mysql@v1.3.3/migrator.go:231
+[7.388ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'elastichd%' ORDER BY SCHEMA_NAME='elastichd' DESC limit 1
+
+2022/05/20 17:55:06 /Users/zxs/workspace/golang/pkg/mod/gorm.io/driver/mysql@v1.3.3/migrator.go:148
+[6.208ms] [rows:-] SELECT * FROM `envs` LIMIT 1
+
+2022/05/20 17:55:06 /Users/zxs/workspace/golang/pkg/mod/gorm.io/driver/mysql@v1.3.3/migrator.go:166
+[13.639ms] [rows:-] SELECT column_name, column_default, is_nullable = 'YES', data_type, character_maximum_length, column_type, column_key, extra, column_comment, numeric_precision, numeric_scale FROM information_schema.columns WHERE table_schema = 'elastichd' AND table_name = 'envs' ORDER BY ORDINAL_POSITION
+
+2022/05/20 17:55:06 /Users/zxs/workspace/golang/pkg/mod/gorm.io/driver/mysql@v1.3.3/migrator.go:228
+[5.957ms] [rows:-] SELECT DATABASE()
+
+2022/05/20 17:55:06 /Users/zxs/workspace/golang/pkg/mod/gorm.io/driver/mysql@v1.3.3/migrator.go:231
+[15.160ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'elastichd%' ORDER BY SCHEMA_NAME='elastichd' DESC limit 1
+
+2022/05/20 17:55:06 /Users/zxs/workspace/project/zxs-gin/bootstrap/db.go:108
+[9.799ms] [rows:-] SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'elastichd' AND table_name = 'envs' AND index_name = 'idx_envs_display_name'
+
+2022/05/20 17:55:06 /Users/zxs/workspace/golang/pkg/mod/gorm.io/driver/mysql@v1.3.3/migrator.go:228
+[2.570ms] [rows:-] SELECT DATABASE()
+
+2022/05/20 17:55:06 /Users/zxs/workspace/golang/pkg/mod/gorm.io/driver/mysql@v1.3.3/migrator.go:231
+[5.479ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'elastichd%' ORDER BY SCHEMA_NAME='elastichd' DESC limit 1
+
+2022/05/20 17:55:06 /Users/zxs/workspace/project/zxs-gin/bootstrap/db.go:108
+[6.108ms] [rows:-] SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'elastichd' AND table_name = 'envs' AND index_name = 'idx_envs_deleted_at'
+
+2022/05/20 17:58:32 /Users/zxs/workspace/golang/pkg/mod/gorm.io/driver/mysql@v1.3.3/migrator.go:228
+[2.320ms] [rows:-] SELECT DATABASE()
+
+2022/05/20 17:58:32 /Users/zxs/workspace/golang/pkg/mod/gorm.io/driver/mysql@v1.3.3/migrator.go:231
+[10.266ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'elastichd%' ORDER BY SCHEMA_NAME='elastichd' DESC limit 1
+
+2022/05/20 17:58:32 /Users/zxs/workspace/project/zxs-gin/bootstrap/db.go:108
+[11.062ms] [rows:-] SELECT count(*) FROM information_schema.tables WHERE table_schema = 'elastichd' AND table_name = 'envs' AND table_type = 'BASE TABLE'
+
+2022/05/20 17:58:32 /Users/zxs/workspace/golang/pkg/mod/gorm.io/driver/mysql@v1.3.3/migrator.go:228
+[2.547ms] [rows:-] SELECT DATABASE()
+
+2022/05/20 17:58:32 /Users/zxs/workspace/golang/pkg/mod/gorm.io/driver/mysql@v1.3.3/migrator.go:231
+[5.910ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'elastichd%' ORDER BY SCHEMA_NAME='elastichd' DESC limit 1
+
+2022/05/20 17:58:32 /Users/zxs/workspace/golang/pkg/mod/gorm.io/driver/mysql@v1.3.3/migrator.go:148
+[9.867ms] [rows:-] SELECT * FROM `envs` LIMIT 1
+
+2022/05/20 17:58:32 /Users/zxs/workspace/golang/pkg/mod/gorm.io/driver/mysql@v1.3.3/migrator.go:166
+[12.977ms] [rows:-] SELECT column_name, column_default, is_nullable = 'YES', data_type, character_maximum_length, column_type, column_key, extra, column_comment, numeric_precision, numeric_scale FROM information_schema.columns WHERE table_schema = 'elastichd' AND table_name = 'envs' ORDER BY ORDINAL_POSITION
+
+2022/05/20 17:58:32 /Users/zxs/workspace/golang/pkg/mod/gorm.io/driver/mysql@v1.3.3/migrator.go:228
+[3.117ms] [rows:-] SELECT DATABASE()
+
+2022/05/20 17:58:32 /Users/zxs/workspace/golang/pkg/mod/gorm.io/driver/mysql@v1.3.3/migrator.go:231
+[7.179ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'elastichd%' ORDER BY SCHEMA_NAME='elastichd' DESC limit 1
+
+2022/05/20 17:58:32 /Users/zxs/workspace/project/zxs-gin/bootstrap/db.go:108
+[6.338ms] [rows:-] SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'elastichd' AND table_name = 'envs' AND index_name = 'idx_envs_display_name'
+
+2022/05/20 17:58:32 /Users/zxs/workspace/golang/pkg/mod/gorm.io/driver/mysql@v1.3.3/migrator.go:228
+[3.696ms] [rows:-] SELECT DATABASE()
+
+2022/05/20 17:58:32 /Users/zxs/workspace/golang/pkg/mod/gorm.io/driver/mysql@v1.3.3/migrator.go:231
+[11.830ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'elastichd%' ORDER BY SCHEMA_NAME='elastichd' DESC limit 1
+
+2022/05/20 17:58:32 /Users/zxs/workspace/project/zxs-gin/bootstrap/db.go:108
+[8.207ms] [rows:-] SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'elastichd' AND table_name = 'envs' AND index_name = 'idx_envs_deleted_at'
+
+2022/05/20 18:01:11 /Users/zxs/workspace/golang/pkg/mod/gorm.io/driver/mysql@v1.3.3/migrator.go:228
+[2.026ms] [rows:-] SELECT DATABASE()
+
+2022/05/20 18:01:11 /Users/zxs/workspace/golang/pkg/mod/gorm.io/driver/mysql@v1.3.3/migrator.go:231
+[10.577ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'elastichd%' ORDER BY SCHEMA_NAME='elastichd' DESC limit 1
+
+2022/05/20 18:01:11 /Users/zxs/workspace/project/zxs-gin/bootstrap/db.go:108
+[5.848ms] [rows:-] SELECT count(*) FROM information_schema.tables WHERE table_schema = 'elastichd' AND table_name = 'envs' AND table_type = 'BASE TABLE'
+
+2022/05/20 18:01:11 /Users/zxs/workspace/golang/pkg/mod/gorm.io/driver/mysql@v1.3.3/migrator.go:228
+[3.669ms] [rows:-] SELECT DATABASE()
+
+2022/05/20 18:01:11 /Users/zxs/workspace/golang/pkg/mod/gorm.io/driver/mysql@v1.3.3/migrator.go:231
+[8.550ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'elastichd%' ORDER BY SCHEMA_NAME='elastichd' DESC limit 1
+
+2022/05/20 18:01:11 /Users/zxs/workspace/golang/pkg/mod/gorm.io/driver/mysql@v1.3.3/migrator.go:148
+[4.757ms] [rows:-] SELECT * FROM `envs` LIMIT 1
+
+2022/05/20 18:01:11 /Users/zxs/workspace/golang/pkg/mod/gorm.io/driver/mysql@v1.3.3/migrator.go:166
+[14.394ms] [rows:-] SELECT column_name, column_default, is_nullable = 'YES', data_type, character_maximum_length, column_type, column_key, extra, column_comment, numeric_precision, numeric_scale FROM information_schema.columns WHERE table_schema = 'elastichd' AND table_name = 'envs' ORDER BY ORDINAL_POSITION
+
+2022/05/20 18:01:11 /Users/zxs/workspace/golang/pkg/mod/gorm.io/driver/mysql@v1.3.3/migrator.go:228
+[1.933ms] [rows:-] SELECT DATABASE()
+
+2022/05/20 18:01:11 /Users/zxs/workspace/golang/pkg/mod/gorm.io/driver/mysql@v1.3.3/migrator.go:231
+[4.819ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'elastichd%' ORDER BY SCHEMA_NAME='elastichd' DESC limit 1
+
+2022/05/20 18:01:11 /Users/zxs/workspace/project/zxs-gin/bootstrap/db.go:108
+[4.707ms] [rows:-] SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'elastichd' AND table_name = 'envs' AND index_name = 'idx_envs_display_name'
+
+2022/05/20 18:01:11 /Users/zxs/workspace/golang/pkg/mod/gorm.io/driver/mysql@v1.3.3/migrator.go:228
+[2.084ms] [rows:-] SELECT DATABASE()
+
+2022/05/20 18:01:11 /Users/zxs/workspace/golang/pkg/mod/gorm.io/driver/mysql@v1.3.3/migrator.go:231
+[5.115ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'elastichd%' ORDER BY SCHEMA_NAME='elastichd' DESC limit 1
+
+2022/05/20 18:01:11 /Users/zxs/workspace/project/zxs-gin/bootstrap/db.go:108
+[4.307ms] [rows:-] SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'elastichd' AND table_name = 'envs' AND index_name = 'idx_envs_deleted_at'
+
+2022/05/20 18:01:50 /Users/zxs/workspace/golang/pkg/mod/gorm.io/driver/mysql@v1.3.3/migrator.go:228
+[2.394ms] [rows:-] SELECT DATABASE()
+
+2022/05/20 18:01:50 /Users/zxs/workspace/golang/pkg/mod/gorm.io/driver/mysql@v1.3.3/migrator.go:231
+[8.530ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'elastichd%' ORDER BY SCHEMA_NAME='elastichd' DESC limit 1
+
+2022/05/20 18:01:50 /Users/zxs/workspace/project/zxs-gin/bootstrap/db.go:108
+[6.588ms] [rows:-] SELECT count(*) FROM information_schema.tables WHERE table_schema = 'elastichd' AND table_name = 'envs' AND table_type = 'BASE TABLE'
+
+2022/05/20 18:01:50 /Users/zxs/workspace/golang/pkg/mod/gorm.io/driver/mysql@v1.3.3/migrator.go:228
+[3.509ms] [rows:-] SELECT DATABASE()
+
+2022/05/20 18:01:50 /Users/zxs/workspace/golang/pkg/mod/gorm.io/driver/mysql@v1.3.3/migrator.go:231
+[6.210ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'elastichd%' ORDER BY SCHEMA_NAME='elastichd' DESC limit 1
+
+2022/05/20 18:01:50 /Users/zxs/workspace/golang/pkg/mod/gorm.io/driver/mysql@v1.3.3/migrator.go:148
+[6.173ms] [rows:-] SELECT * FROM `envs` LIMIT 1
+
+2022/05/20 18:01:50 /Users/zxs/workspace/golang/pkg/mod/gorm.io/driver/mysql@v1.3.3/migrator.go:166
+[10.447ms] [rows:-] SELECT column_name, column_default, is_nullable = 'YES', data_type, character_maximum_length, column_type, column_key, extra, column_comment, numeric_precision, numeric_scale FROM information_schema.columns WHERE table_schema = 'elastichd' AND table_name = 'envs' ORDER BY ORDINAL_POSITION
+
+2022/05/20 18:01:50 /Users/zxs/workspace/golang/pkg/mod/gorm.io/driver/mysql@v1.3.3/migrator.go:228
+[2.828ms] [rows:-] SELECT DATABASE()
+
+2022/05/20 18:01:50 /Users/zxs/workspace/golang/pkg/mod/gorm.io/driver/mysql@v1.3.3/migrator.go:231
+[7.366ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'elastichd%' ORDER BY SCHEMA_NAME='elastichd' DESC limit 1
+
+2022/05/20 18:01:50 /Users/zxs/workspace/project/zxs-gin/bootstrap/db.go:108
+[5.257ms] [rows:-] SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'elastichd' AND table_name = 'envs' AND index_name = 'idx_envs_display_name'
+
+2022/05/20 18:01:50 /Users/zxs/workspace/golang/pkg/mod/gorm.io/driver/mysql@v1.3.3/migrator.go:228
+[2.141ms] [rows:-] SELECT DATABASE()
+
+2022/05/20 18:01:50 /Users/zxs/workspace/golang/pkg/mod/gorm.io/driver/mysql@v1.3.3/migrator.go:231
+[8.588ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'elastichd%' ORDER BY SCHEMA_NAME='elastichd' DESC limit 1
+
+2022/05/20 18:01:50 /Users/zxs/workspace/project/zxs-gin/bootstrap/db.go:108
+[6.158ms] [rows:-] SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'elastichd' AND table_name = 'envs' AND index_name = 'idx_envs_deleted_at'

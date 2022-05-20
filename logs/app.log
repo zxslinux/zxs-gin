@@ -1,0 +1,12 @@
+{"level":"local.info","ts":"[2022-05-20 15:19:29.614]","caller":"zxs-gin/main.go:15","msg":"init success"}
+{"level":"local.info","ts":"[2022-05-20 17:29:24.692]","caller":"zxs-gin/main.go:15","msg":"init success"}
+{"level":"local.info","ts":"[2022-05-20 17:32:26.336]","caller":"zxs-gin/main.go:15","msg":"init success"}
+{"level":"local.info","ts":"[2022-05-20 17:42:57.293]","caller":"zxs-gin/main.go:12","msg":"init success"}
+{"level":"local.info","ts":"[2022-05-20 17:47:52.980]","caller":"zxs-gin/main.go:12","msg":"init success"}
+{"level":"local.info","ts":"[2022-05-20 17:51:53.340]","caller":"zxs-gin/main.go:12","msg":"init success"}
+{"level":"local.info","ts":"[2022-05-20 17:52:58.553]","caller":"zxs-gin/main.go:12","msg":"init success"}
+{"level":"local.info","ts":"[2022-05-20 17:53:18.988]","caller":"zxs-gin/main.go:12","msg":"init success"}
+{"level":"local.info","ts":"[2022-05-20 17:55:06.563]","caller":"zxs-gin/main.go:12","msg":"init success"}
+{"level":"local.info","ts":"[2022-05-20 17:58:32.415]","caller":"zxs-gin/main.go:12","msg":"init success"}
+{"level":"local.info","ts":"[2022-05-20 18:01:11.149]","caller":"zxs-gin/main.go:12","msg":"init success"}
+{"level":"local.info","ts":"[2022-05-20 18:01:50.295]","caller":"zxs-gin/main.go:12","msg":"init success"}
